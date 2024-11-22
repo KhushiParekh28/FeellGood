@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("bg.PNG");
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+        }
+        
+        .container {
+            display: flex;
+            border-radius: 8px;
+            backdrop-filter: blur(7px);
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 50vw;
+            height: 60vh;
+        }
+        
+        .signup-form {
+            padding: 2rem;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .signup-form h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            padding-left: 2.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+        
+        .signup-form button {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            background-color: #FEC5BB;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .illustration {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .illustration img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .error {
+            color: red;
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-form">
+            <h2>Signup</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <i>👤</i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i>📧</i>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i>🔒</i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit"><b>Sign Up</b></button>
+            </form>
+            <div id="error" class="error"></div>
+        </div>
+        <div class="illustration">
+            <img src="signuptr.png" alt="Illustration">
+        </div>
+    </div>
+    <script>
+        // JavaScript from register.html
+        const form = document.getElementById('registerForm');
+        const errorDiv = document.getElementById('error');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:5000/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, email, password }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert("Registration successful! You can now log in.");
+                    errorDiv.textContent = '';
+                    window.location.href = "login.html";
+                } else {
+                    errorDiv.textContent = data.error || "Registration failed";
+                }
+            } catch (error) {
+                errorDiv.textContent = "An error occurred. Please try again.";
+            }
+        });
+    </script>
+</body>
+</html>
+

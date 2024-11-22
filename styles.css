@@ -1,0 +1,321 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background: #FFE5D9; */
+    /* background-color: #b8b8ff; */
+    background-image: url("download\ \(1\).jpg");
+    
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    margin-bottom: 2.5rem;
+}
+
+.nav-brand {
+    font-size: 3em;
+    font-weight: bold;
+    color: black;
+    font-family: "Dancing Script", cursive;
+}
+
+.nav-links {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.nav-links a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color:#efa6b6   ;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #de9cab;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+
+
+h1 {
+    font-size: 2em;
+    color: #3d3d3d;
+    /* color: white; */
+    margin: 0;
+}
+
+.outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("https://static.vecteezy.com/system/resources/previews/007/302/976/non_2x/social-network-communication-concept-with-different-emoji-and-icons-square-orientation-vector.jpg"); */
+    /* height: 100%;
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.75);
+    /* background: #3d3d3d; */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+#main-content{
+    opacity: 1;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-button {
+    /* background: #d0b8ac; */
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.nav-button:hover {
+    background:#f7bac7;
+    color: white;
+}
+
+#calendar {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.day {
+    padding: 20px;
+    /* background-color: #d0ac9a; */
+    background-color: #f7bac7;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    width: 30px;
+    transition: transform 0.2s;
+}
+
+.day:hover {
+    transform: scale(1.05);
+}
+
+.prev-month, .next-month {
+    color: black;
+    opacity: 0.5;
+}
+
+.day.happy { background-color:#f7aef8; color: black }
+.day.sad { background-color: #f7aef8; color: black}
+.day.angry { background-color: #f8aa8e; color: black}
+.day.neutral { background-color: #f0ccaf; color:black}
+.day.excited { background-color:#f7aef8; color:black}
+.day.bored { background-color: #f0ccaf; color:black}
+.day.surprised { background-color: #f7aef8; color: black}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #f7bac7;
+    padding: 20px;
+    width: 800px;
+    margin: 100px auto;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.emoji-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.emoji {
+    font-size: 50px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #f8f7ff;
+    border: none;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid black;
+}
+
+.emoji span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.emoji.selected {
+    background-color: black;
+    box-shadow: 0px 0px 10px #e3a8b5;
+    span{
+        color: white;
+    }
+}
+
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    height: 100px;
+}
+
+.save-button, .delete-button {
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.save-button:hover, .delete-button:hover {
+    background-color:#DEE2DC;
+    color: black;
+    border: 2px solid black;
+}
+
+.delete-button {
+    background-color:black;
+}
+
+.delete-button:hover {
+    background-color: #DEE2DC;
+}
+
+
+@media (max-width: 768px){
+    #calendar{
+        grid-template-columns: repeat(5,1fr);
+        gap: 7px;
+    }
+
+    .modal-content{
+        width: 300px;
+    }
+
+    .emoji{
+        font-size: 40px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .emoji-container{
+        gap: 15px;
+    }
+
+    .emoji span{
+        margin-top: 1.5px;
+        font-size: 12px;
+    }
+
+    .calendar-container{
+        padding: 10px;
+    }
+
+    
+}

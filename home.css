@@ -1,0 +1,235 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+   
+}
+
+/* Body & General Layout */
+body {
+    background-color: #e39ff6 /* White background for the entire page */
+    font-size: large;
+    color: black; /* Soft purple text color for consistency */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ffffff; /* White background for navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+   /* Subtle shadow for the navbar */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* This will push the brand to the left and menu items to the right */
+    align-items: center;
+    padding: 10px 20px; /* Added padding for space on the sides */
+}
+
+nav .brand {
+    font-family: 'Dancing Script',cursive;
+    font-size: 3em;
+    font-weight: bold;
+    color: black; /* Soft purple shade */
+}
+
+nav ul {
+    
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; /* Soft purple color */
+    font-size: 1.5em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #9f8b9f; /* Slightly darker soft purple on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e4b2f2 ;
+    color: black;
+    text-align: center;
+    padding: 100px 20px; /* Space for hero content */
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    height: 60vh;
+    background-position: center;
+    align-content: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    background-color: #131214; /* Soft muted purple */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #9b8196; /* Slightly darker purple on hover */
+}
+
+/* Mood Categories Section */
+.mood-categories {
+    background-color: #ffffff; /* White background for the section */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.mood-categories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.mood-categories p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.category-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.category-card {
+    background-color: #ffffff;
+   
+    border-radius: 10px;
+    font-size: large;
+    padding: 30px;
+    width: 400px; /* Larger cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for cards */
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+}
+
+.category-card img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.joycard
+{
+   
+    height: 600px;
+}
+.category-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    font-size: 1.1rem;
+    color: black; /* Soft purple text */
+}
+
+/* Mental Health Resources Section */
+.resources {
+    background-color: #ffffff; /* White background for the resources section */
+    padding: 50px 0;
+    
+    text-align: center;
+}
+
+.resources h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.resources p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.resource-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.resource-card {
+    background-color: #ecb7fa ;
+    border-radius: 10px;
+    font-size: large;
+    padding: 30px;
+    width: 450px; /* Larger cards */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for cards */
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+}
+
+.resource-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.resource-card p {
+    font-size: 1.1rem;
+    color: black; /* Soft purple text */
+    margin-bottom: 20px;
+}
+
+.resource-card a {
+    display: inline-block;
+    font-weight: 600;
+    color: purple; /* Soft muted purple for links */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resource-card a:hover {
+    color: #9b8196; /* Slightly darker soft purple on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #ffffff;  /* White footer */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    color: #7f6b84;
+    font-size: 1rem;
+}

@@ -1,0 +1,209 @@
+/* Navbar Styles */
+.navbar {
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 3.0em;
+  font-weight: 300;
+  color: #333;
+  font-family: 'Dancing Script', cursive;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: inline;
+}
+
+.navbar-links a,
+#back-button {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover,
+#back-button:hover {
+  color: #f7bac7; /* Light pink color on hover */
+}
+
+
+/* Make the navbar responsive */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .navbar-brand {
+      font-size: 1.5em;
+  }
+
+  .navbar-links li {
+      text-align: center;
+  }
+
+  .navbar-links a,
+  #back-button {
+      font-size: 1.3em;
+  }
+}
+ 
+/* styles.css */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif; /* Using Google font Roboto */
+  margin: 0;
+  padding: 0;
+  background-color: #ffe4e1; /* Light pink background */
+  color: black; /* All text set to black */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff; /* White background for container */
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: black; /* Black for header text */
+  margin-bottom: 10px;
+}
+
+header p {
+  font-style: italic;
+  color: black; /* Black for quotes */
+  font-size: 1.2em;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #f7bac7;
+  border-radius: 8px;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  background: #fff0f3; /* Light pink for input background */
+  color: black; /* Black for input text */
+}
+
+textarea {
+  height: 120px; /* Increased height for textarea */
+  resize: none;
+}
+
+input {
+  height: 40px; /* Consistent height for input fields */
+}
+
+button {
+  padding: 12px 15px;
+  background-color: #f7c4d4; /* Light pink for buttons */
+  color: black; /* Black for button text */
+  border: none;
+  border-radius: 8px; /* Softer corners */
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #f9d2df; /* Slightly brighter pink on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+#entries-section h2, #tags-section h3 {
+  margin-bottom: 15px;
+  color: black; /* Black for section headings */
+}
+
+#entries-list, #tag-list {
+  list-style: none;
+  padding: 0;
+}
+
+#entries-list li {
+  background: #ffe6e9; /* Light pink for list items */
+  color: black; /* Black for list text */
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border-left: 6px solid #d27685; /* Muted pink left border */
+}
+
+#entries-list li span {
+  display: block;
+  font-size: 0.9em;
+  color: black; /* Black for additional details */
+  margin-top: 5px;
+}
+
+#tag-list button {
+  background: #f7c4d4; /* Light pink for tags */
+  color: black; /* Black for button text */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#tag-list button:hover {
+  background-color: #f9d2df; /* Lighter pink on hover */
+}
+
+.journal-form {
+  margin-bottom: 25px;
+}
+
+.journal-form textarea, .journal-form input {
+  margin-bottom: 15px; /* Consistent spacing between inputs */
+}
+
+#search {
+  margin-bottom: 20px;
+  border: 1px solid #f7bac7;
+  height: 40px; /* Adjust height for the search bar */
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff0f3; /* Light pink */
+  color: black; /* Black for search text */
+}

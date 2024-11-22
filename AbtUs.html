@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeelGood - About Us & Contact Us</title>
+  <link rel="stylesheet" href="AbtUs.css">
+  <script src="AbtUs.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+</style>
+</head>
+<body>
+  <header class="header">
+    <h1>FeelGood</h1>
+    <nav class="navbar">
+      <!--<div class="nav-brand">Mood Tracker</div>-->
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="main.html">Calender</a></li>
+          <li><a href="index.html">Blogs</a></li>
+          <li><a href="AbtUs.html">AboutUs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+      <h2>About Us</h2>
+      <p>Welcome to <strong>FeelGood</strong>, your personal mood tracker designed to help you navigate your emotions and improve your well-being. Our mission is to empower individuals by providing tools for self-reflection and emotional awareness in a simple and intuitive way.</p>
+      <p>With <strong>FeelGood</strong>, you can track your daily moods, gain insights into patterns, and find resources to enhance your mental health journey.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We'd love to hear from you!</p>
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 FeelGood. All rights reserved.</p>
+  </footer>
+</body>
+</html>

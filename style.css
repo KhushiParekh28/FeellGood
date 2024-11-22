@@ -1,0 +1,170 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+/* Body & General Layout */
+body {
+    background-color: #edc8e8; /* Soft pink background for the page */
+    background-image: url('pink.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navigation Bar */
+nav {
+
+    background-color: #ffffff; /* White background for navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* This will push the brand to the left and menu items to the right */
+    align-items: center;
+    padding: 10px 20px; /* Added padding for space on the sides */
+}
+
+nav .brand {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    color: #6A4C6C;
+    margin-left: 0;
+}
+
+/* Menu Items */
+nav ul {
+   ]
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+   
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #6A4C6C; /* Text color for links */
+    font-size: 1.5rem;
+    font-weight: 500;
+   
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6347; /* Hover effect color */
+}
+
+/* Container for Blog Posts */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto 0; /* Margin added to prevent overlap with navbar */
+}
+
+/* Blog Posts */
+.post {
+    background-color: #FFF0F5;  /* Light lavender background for each post */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for blog post */
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+}
+
+.post h3 {
+    color: #6A4C6C;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.post p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Emotion Images */
+.emotion-img {
+    width: 120px;
+    height: auto;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Read More Button */
+.post a {
+    display: inline-block;
+    font-weight: 600;
+    color: #FF6347;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.post a:hover {
+    color: #FF4500; /* Hover effect for 'Read More' link */
+    transition: color 0.3s ease;
+}
+
+/* Footer Section */
+footer {
+    background-color: white;  /* Light pink footer */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    color: #6A4C6C;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post {
+        padding: 15px;
+    }
+
+    .emotion-img {
+        width: 100px;
+    }
+
+    .post h3 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav .brand {
+        margin-bottom: 10px;
+    }
+}

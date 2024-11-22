@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="stylesjournal.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Feel Good</a>
+            <ul class="navbar-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="main.html">Calender</a></li>
+                <li><a href="AbtUs.html">About Us</a></li>
+                <li><a href="index.html">Blogs</a></li>
+                <li><a href="index.html">Journal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Welcome to Your Journal</h1>
+            <p id="quote"></p>
+        </header>
+
+        <div class="journal-form">
+            <textarea id="journal-entry" placeholder="How was your day?"></textarea>
+            <input type="text" id="tags" placeholder="Add tags (e.g., happy, productive)">
+            <textarea id="gratitude" placeholder="What are you grateful for?"></textarea>
+            <button id="save-entry">Save Entry</button>
+        </div>
+
+        <div id="entries-section">
+            <h2>Your Journal Entries</h2>
+            <div>
+                <input type="text" id="search" placeholder="Search your entries...">
+            </div>
+            <ul id="entries-list"></ul>
+        </div>
+
+        <div id="tags-section">
+            <h3>Tags</h3>
+            <div id="tag-list"></div>
+        </div>
+    </div>
+
+    <script src="journal.js"></script>
+</body>
+</html>
+
