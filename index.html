@@ -3,66 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Health Tracker Blog - Inside Out Theme</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FeelGood - Mood Tracker</title>
+    <link rel="stylesheet" href="landing.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
     </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="brand">Feel Good</div>  <!-- Company name on the left -->
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="main.html">Calender</a></li>
-            <li><a href="journal.html">Journal</a></li>
-            <li><a href="index.html">Blogs</a></li>
-            <li><a href="AbtUs.html">AboutUs</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">FeelGood</div>
     </nav>
-    
-    <!-- Blog Content Section -->
-    <section class="content">
-        <div class="container">
-            <div class="post">
-                <h3>Joy: Embracing Happiness</h3>
-                <img src="joy.png" alt="Joy" class="emotion-img">
-                <p>Joy is all about finding the bright side of life. Learn how embracing joy can help you foster positivity.</p>
-                <a href="https://www.nytimes.com/article/how-to-be-happy.html">Read More</a>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="text-content">
+                <h1 class="headline">Track Your Mood, Enhance Your Life</h1>
+                <p class="tagline">FeelGood helps you stay connected with your emotions and achieve mental clarity.</p>
+                <button class="cta">Start Your Journey</button>
             </div>
-            <div class="post">
-                <h3>Sadness: Acknowledging Your Feelings</h3>
-                <img src="sadness.png" alt="Sadness" class="emotion-img">
-                <p>Sadness teaches us the importance of acknowledging and expressing our sorrow for emotional healing.</p>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3181878/">Read More</a>
-            </div>
-            <div class="post">
-                <h3>Disgust: Setting Boundaries</h3>
-                <img src="disguist.png" alt="Disgust" class="emotion-img">
-                <p>Disgust helps us recognize when we need to set emotional boundaries to protect our mental health.</p>
-                <a href="https://www.nytimes.com/2021/12/27/magazine/disgust-science.html">Read More</a>
-            </div>
-            <div class="post">
-                <h3>Fear: Understanding Anxiety</h3>
-                <img src="fear.png" alt="Fear" class="emotion-img">
-                <p>Fear can be overwhelming, but understanding it can help us better manage anxiety and stress.</p>
-                <a href="https://www.medicalnewstoday.com/articles/dissecting-terror-how-does-fear-work">Read More</a>
-            </div>
-            <div class="post">
-                <h3>Anger: Finding Calm</h3>
-                <img src="anger.png" alt="Anger" class="emotion-img">
-                <p>Anger is a powerful emotion. Learn how to express it in healthy ways to avoid burnout and frustration.</p>
-                <a href="https://www.apa.org/topics/anger/control">Read More</a>
+            <div class="image-content">
+                <img src="WhatsApp Image 2024-11-21 at 18.52.07_2d2c8e71.jpg" alt="WhatsApp Image 2024-11-21 at 18.52.07_2d2c8e71.jpg" class="hero-image">
             </div>
         </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; Feel Good. All rights reserved.</p>
-    </footer>
-
+    </header>
+    <script>
+        // Using querySelector to select the button directly
+        document.querySelector(".cta").addEventListener("click", function() {
+            window.location.href = "register.html"; // Adjust the URL according to your registration page's location
+        });
+    </script>
+    
 </body>
 </html>
+
